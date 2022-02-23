@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="about">
+    <h1>This is an about page</h1>
+    <AddTodo />
+    <TodosView />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import { defineComponent, onMounted } from "vue";
+import TodosView from "@/components/TodosView.vue";
+import AddTodo from "@/components/AddTodo.vue";
+import { useStore } from "@/store";
+import { ActionTypes } from "@/store/types";
 
 export default defineComponent({
-  name: "HomeView",
-  components: {
-    HelloWorld,
+  components: { TodosView, AddTodo },
+  setup() {
+    const store = useStore();
+
+    store.dispatch(ActionTypes.FetchTodoItems);
   },
+
+  // methods: {
+  //   ...mapActions(["FETCH_ITEMS"]),
+  // },
+
+  // mounted() {
+  //   this.FETCH_ITEMS();
+  // },
 });
 </script>

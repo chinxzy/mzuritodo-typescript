@@ -1,0 +1,60 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Home"
+    },
+    {
+      "id": 1,
+      "name": "School"
+    },
+    {
+      "id": 2,
+      "name": "Shopping"
+    },
+    {
+      "id": 3,
+      "name": "Work"
+    },
+    {
+      "name": "default",
+      "id": 4
+    },
+    {
+      "name": "University",
+      "id": 5
+    }
+  ],
+  "tasks": [
+    {
+      "name": "fetch water",
+      "completed": "complete",
+      "id": 1
+    },
+    {
+      "name": "go home",
+      "completed": "completed",
+      "id": 2
+    },
+    {
+      "name": "hello",
+      "completed": "completed",
+      "id": 3
+    },
+    {
+      "name": "iooin",
+      "completed": "completed",
+      "id": 4
+    },
+    {
+      "name": "life",
+      "completed": "completed",
+      "id": 5
+    },
+    {
+      "name": "jbiio",
+      "completed": "completed",
+      "id": 6
+    }
+  ]
+}
