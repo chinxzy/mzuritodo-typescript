@@ -33,7 +33,7 @@ export default defineComponent({
     const deleteTodo = (id: TodoItem) => {
       store.dispatch(ActionTypes.RemoveItem, id);
     };
-    const completeItem = (id: TodoItem) => {
+    const completeItem = (id: number) => {
       console.log(id);
       store.dispatch(ActionTypes.completeItem, id);
     };

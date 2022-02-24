@@ -14,14 +14,14 @@ export const mutations = {
     state.items.unshift(item);
   },
   [MutationTypes.SetTodoItems](state: State, items: TodoItem[]) {
-    state.items = items;
+    state.items = items.reverse();
   },
   [MutationTypes.RemoveTodoItems](state: State, id: number) {
     state.items = state.items.filter((item) => item.id !== id);
   },
-  [MutationTypes.completeItem](state: State, id: number) {
-    const index = state.items.findIndex((item) => item.id !== id);
+  [MutationTypes.completeItem](state: State, data: TodoItem) {
+    const id = data.id;
+    const index = state.items.findIndex((item) => item.id == id);
     state.items[index].completed = "completed";
-    console.log(id);
   },
 };

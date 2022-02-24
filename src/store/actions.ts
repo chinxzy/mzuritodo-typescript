@@ -52,12 +52,8 @@ export const actions = {
       console.log(error);
     }
   },
-  async [ActionTypes.completeItem](
-    { commit }: { commit: Commit },
-    id: TodoItem
-  ) {
+  async [ActionTypes.completeItem]({ commit }: { commit: Commit }, id: number) {
     try {
-      console.log(id);
       const { data } = await axios.patch(`http://localhost:3000/tasks/${id}`, {
         completed: "completed",
       });
